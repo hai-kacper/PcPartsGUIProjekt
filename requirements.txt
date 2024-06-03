@@ -1,0 +1,4 @@
+gradio
+pillow
+torch
+torchvision
