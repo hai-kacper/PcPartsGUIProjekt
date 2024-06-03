@@ -17,4 +17,10 @@ COPY . /app
 EXPOSE 7860
 
 # Run main.py when the container launches
-CMD ["python", "main.py"]
+CMD ["python", "main.py","-e", "production"]
+ENTRYPOINT ["python", "main.py", "-e", "production"]
+
+##Buildujemy tak:
+    #docker build -t my_image_name .
+##Odpalamy kontener tak:
+    #docker run -p 7860:7860 my_image_name

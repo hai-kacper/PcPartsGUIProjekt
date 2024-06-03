@@ -79,5 +79,6 @@ with gr.Blocks() as demo:
     browse_button.click(fn=classify_image, inputs=image_input, outputs=image_output)
     random_test_button.click(fn=random_test, inputs=None, outputs=[image_input, image_output])
 
-# Run the Gradio application
-demo.launch()
+
+# Run the Gradio application with external access enabled
+demo.launch(share=True, server_port=7860, server_name="0.0.0.0") 
